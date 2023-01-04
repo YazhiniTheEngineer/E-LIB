@@ -1,0 +1,9 @@
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let book of books">
+        <div class="card bg-dark text-white" (click)="showBookComponent(book)">
+            <img [src]="book.bookImg" class="card-img-top" alt="..." >
+              <p class="card-title"><b>{{book.bookName}}</b><br> by <br><em>{{book.authorName}}</em></p> 
+        </div>
+    </div>
+</div>
+

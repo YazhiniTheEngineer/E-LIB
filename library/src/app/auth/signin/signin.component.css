@@ -1,0 +1,38 @@
+.signin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809__480.jpg');
+}
+
+form{
+    width: 40%;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 275%;
+}
+
+.signin-btn{
+    text-align: center;
+}
+
+.signin-form div{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.help-block{
+    color: rgb(230, 230, 62);
+    font-size: 15px;
+}
+
+.warning{
+    text-align: center;
+}

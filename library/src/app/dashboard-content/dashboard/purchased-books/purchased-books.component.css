@@ -1,0 +1,23 @@
+.grid-container{
+    width: 78vw;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+  color: white;
+}
+
+table th{
+  color: tomato;
+}
+
+tr:hover{
+  background-color: white;
+  color: #000;
+}
+
+
+

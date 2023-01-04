@@ -1,0 +1,32 @@
+.flex-container{
+    color: white;
+}
+
+.img-container img{
+    flex-grow: 5;
+
+}
+
+.flex-item{
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+}
+
+.img-container{
+    flex-grow: 4;
+    display: flex;
+    margin-right: 25px;
+}
+
+.desc-container{
+    flex-grow: 6;
+}
+
+.info{
+    background-color:#0dcaf0;
+}
+
+.success{
+    background-color: #198754;
+}

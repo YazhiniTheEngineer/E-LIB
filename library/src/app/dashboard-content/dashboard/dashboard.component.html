@@ -1,0 +1,15 @@
+<div class="dashboard bg-dark">
+    <div class="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="searchbar">
+        <app-searchbar class="search"></app-searchbar>
+        <router-outlet></router-outlet>
+<!--         
+        <app-allbooks [ngStyle]="{'display' : isAllBooksActive}" (onAllBook)="onAllBook($event)" class="allbook"></app-allbooks>
+
+        <app-book class="book" [ngStyle]="isAllBooksActive=='none' ? {'display' : 'block'} : {'display' : 'none'}" (closeBookComponent)="closeBookComponent($event)" [book]="book"></app-book> -->
+
+    </div>
+</div>
+

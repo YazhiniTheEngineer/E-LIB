@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-dark p-3">
+    <div class="container-fluid justify-content-end">
+
+      <form class="d-flex" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <input 
+        class="form-control me-2" 
+        type="search" 
+        placeholder="Search Books"
+        ngModel
+        name = "search"
+        #search = "ngModel"
+        required
+        aria-label="Search"
+        [ngStyle]="!search.valid && search.touched ? {'border':'1px solid red'} : null">
+
+          <button class="btn btn-dark btn-outline-light"
+          routerLink="search" routerLinkActive="active" 
+          ariaCurrentWhenActive="page" 
+          type="submit">Search</button>
+
+      </form>
+    </div>
+  </nav>
+

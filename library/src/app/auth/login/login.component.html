@@ -1,0 +1,45 @@
+<div class="login">
+    <form class="login-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+        
+            <h2>Login to Your Account</h2>
+            <div class="warning" [ngStyle]="{'display': display}">
+              <p class="text-warning">Username and Password doesn't match</p>
+            </div>
+            <div class="form-floating mb-2">
+              <input 
+              type="email" 
+              class="form-control" 
+              id="email" 
+              ngModel name="email"
+              placeholder="name@example.com" 
+              #email="ngModel"
+              required>
+              <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid Email Id</span>
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input 
+              type="password" 
+              class="form-control" id="password" 
+              ngModel name="password"
+              placeholder="Secret..." 
+              #password="ngModel"
+              minlength="6"
+              maxlength="12"
+              required>
+              <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a valid password</span>
+              <label for="password">Password</label>
+            </div>
+          <div>
+            <a routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page"> New User</a>
+          </div>
+          <div class="login-btn">
+            <button 
+            type="submit"  
+            class="btn btn-danger"
+            [disabled]="!f.valid"
+            >Log In</button>
+          </div>
+
+      </form>
+</div>

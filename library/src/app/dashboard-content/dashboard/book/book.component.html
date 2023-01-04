@@ -1,0 +1,27 @@
+<div class="flex-container">
+    <div class="flex-item">
+        <div class="img-container">
+            <img class="d-flex" [src]="book.bookImg" alt="" srcset="">
+        </div>
+        <div class="desc-container">
+            <div class="text-end">
+                <button type="button" class="btn-close btn-close-white" routerLink="/dashboard/allbooks" routerLinkActive="active" ariaCurrentWhenActive="page" aria-label="Close"></button>
+            </div>
+            <div>
+                <h1>{{book.bookName}}</h1>
+            </div>
+           <div>
+               <p>{{book.authorName}}</p> <p>publication Date : {{book.publishedDate}}</p>
+           </div>
+            <div>
+                <p>{{book.bookDescription}}</p>
+            </div>
+            <div class="text-start">
+                <button class="btn"  
+                (click)="addtoPurchase(book)" 
+                [ngClass]="{'info' : toggle, 'success': !toggle}"><span>{{toggle ? 'Purchase' : 'Purchased'}}</span></button>
+                
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="signin">
+    <form class="signin-form" (ngSubmit)="onSubmit()" #f="ngForm">
+        
+            <h2>Create Account</h2>
+            <div class="warning" [ngStyle]="{'display': display}">
+              <p class="text-warning">Email Id already exist</p>
+            </div>
+        <div class="form-floating mb-2">
+            <input 
+            type="text" 
+            class="form-control" 
+            ngModel
+            id="name" name="name"
+            placeholder="Name" 
+            #name="ngModel" 
+            required>
+            <span class="help-block" *ngIf="!name.valid && name.touched">Please enter a valid Name</span>
+            <label for="name">Name</label>
+          </div>
+          <div class="form-floating mb-2">
+            <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            ngModel name="email"
+            placeholder="name@example.com" 
+            #email="ngModel"
+            required>
+            <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid Email Id</span>
+            <label for="email">Email address</label>
+          </div>
+        <div class="form-floating mb-2">
+            <input 
+            type="tel" 
+            class="form-control" 
+            id="phnNo" 
+            ngModel name="phnNo"
+            placeholder="9876543210" pattern="[6-9]{1}[0-9]{9}" 
+            #phnNo="ngModel"
+            required>
+            <span class="help-block" *ngIf="!phnNo.valid && phnNo.touched">Please enter a valid Phone Number</span>
+            <label for="phnNo">Phone Number</label>
+          </div>
+          <div class="form-floating mb-2">
+            <input 
+            type="password" 
+            class="form-control" id="password" 
+            ngModel name="password"
+            placeholder="Secret..." 
+            #password="ngModel"
+            minlength="6"
+            maxlength="12"
+            required>
+            <span class="help-block" *ngIf="!password.valid && password.touched">Please enter a valid password</span>
+            <label for="password">Password</label>
+          </div>
+          <div class="help-block">
+            <a href="" routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Already a User</a>
+          </div>
+          <div class="signin-btn mt-3">
+            <button 
+            type="submit"  
+            class="btn btn-danger"
+            [disabled]="!f.valid"
+            >Sign In 
+            </button>
+          </div>
+      </form>
+</div>
